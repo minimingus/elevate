@@ -64,21 +64,21 @@ struct ActiveSessionView: View {
 
             Spacer().frame(height: 32)
 
-            // MARK: Stats cards
-            HStack(spacing: 10) {
-                SessionStatCard(
+            // MARK: Stats tiles
+            HStack(spacing: 12) {
+                SessionStatTile(
                     icon: "building.2.fill",
                     value: "\(trackingVM.floors)",
                     label: "Floors",
                     color: .blue
                 )
-                SessionStatCard(
+                SessionStatTile(
                     icon: "arrow.up.right",
                     value: formatElevation(trackingVM.elevationMeters),
                     label: "Elevation",
                     color: .green
                 )
-                SessionStatCard(
+                SessionStatTile(
                     icon: "speedometer",
                     value: trackingVM.pace < 1 ? "—" : "\(Int(trackingVM.pace))",
                     label: "spm",
@@ -132,33 +132,27 @@ struct ActiveSessionView: View {
     }
 }
 
-private struct SessionStatCard: View {
+private struct SessionStatTile: View {
     let icon: String
     let value: String
     let label: String
     let color: Color
 
     var body: some View {
-        HStack(spacing: 14) {
-            ZStack {
-                Circle()
-                    .fill(color.opacity(0.15))
-                    .frame(width: 44, height: 44)
-                Image(systemName: icon)
-                    .font(.body.bold())
-                    .foregroundStyle(color)
-            }
-            VStack(alignment: .leading, spacing: 2) {
-                Text(value)
-                    .font(.system(size: 22, weight: .bold, design: .rounded))
-                    .contentTransition(.numericText())
-                Text(label)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-            Spacer()
+        VStack(spacing: 6) {
+            Image(systemName: icon)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(color)
+            Text(value)
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .contentTransition(.numericText())
+                .minimumScaleFactor(0.7)
+                .lineLimit(1)
+            Text(label)
+                .font(.system(size: 11, weight: .medium))
+                .foregroundStyle(.secondary)
         }
-        .padding(.horizontal, 16)
+        .frame(maxWidth: .infinity)
         .padding(.vertical, 14)
         .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 18))
