@@ -6,7 +6,7 @@ struct IdleView: View {
     let onHistory: () -> Void
     let onAchievements: () -> Void
 
-    @State private var showGoalPicker = false
+    @State private var showSettings = false
     @AppStorage("dailyStepGoal") private var dailyStepGoal: Int = 400
 
     private var goalProgress: Double {
@@ -27,10 +27,17 @@ struct IdleView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                if historyVM.currentStreak > 0 {
-                    Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
-                        .font(.title2.bold())
-                        .foregroundStyle(.orange)
+                HStack(spacing: 12) {
+                    if historyVM.currentStreak > 0 {
+                        Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
+                            .font(.title2.bold())
+                            .foregroundStyle(.orange)
+                    }
+                    Button { showSettings = true } label: {
+                        Image(systemName: "gearshape.fill")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .padding(.horizontal)
@@ -67,7 +74,7 @@ struct IdleView: View {
                             }
                         }
                         Button {
-                            showGoalPicker = true
+                            showSettings = true
                         } label: {
                             Label("Goal: \(dailyStepGoal)", systemImage: "target")
                                 .font(.caption.bold())
@@ -180,9 +187,8 @@ struct IdleView: View {
             .padding(.bottom, 8)
         }
         .onAppear { historyVM.load() }
-        .sheet(isPresented: $showGoalPicker) {
-            GoalPickerSheet(goal: $dailyStepGoal)
-                .presentationDetents([.height(320)])
+        .sheet(isPresented: $showSettings) {
+            SettingsView { historyVM.load() }
         }
     }
 }
@@ -214,47 +220,3 @@ private struct StatTile: View {
     }
 }
 
-private struct GoalPickerSheet: View {
-    @Binding var goal: Int
-    @Environment(\.dismiss) private var dismiss
-
-    private let presets = [100, 200, 300, 400, 500, 750, 1000]
-
-    var body: some View {
-        VStack(spacing: 20) {
-            Text("Daily Step Goal")
-                .font(.title3.bold())
-                .padding(.top, 24)
-
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 10) {
-                ForEach(presets, id: \.self) { preset in
-                    Button {
-                        goal = preset
-                        UserDefaults.standard.set(preset, forKey: "dailyStepGoal")
-                        dismiss()
-                    } label: {
-                        Text("\(preset)")
-                            .font(.system(.body, design: .rounded).bold())
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 12)
-                            .background(goal == preset ? Color.green : Color(.secondarySystemBackground))
-                            .foregroundStyle(goal == preset ? .black : .primary)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                    }
-                }
-            }
-            .padding(.horizontal)
-
-            HStack {
-                Text("Custom:")
-                    .foregroundStyle(.secondary)
-                Stepper("\(goal) steps", value: $goal, in: 50...2000, step: 50, onEditingChanged: { _ in
-                    UserDefaults.standard.set(goal, forKey: "dailyStepGoal")
-                })
-            }
-            .padding(.horizontal)
-
-            Spacer()
-        }
-    }
-}
