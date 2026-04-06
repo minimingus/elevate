@@ -40,10 +40,6 @@ struct ContentView: View {
                 achievementVM.load()
             }
         }
-        .task {
-            let hk = HealthKitService()
-            try? await hk.requestPermission()
-        }
         .fullScreenCover(isPresented: .constant(!hasCompletedOnboarding)) {
             OnboardingView()
         }
