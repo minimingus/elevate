@@ -1,4 +1,6 @@
 import SwiftUI
+import CoreMotion
+import Combine
 
 struct OnboardingView: View {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
@@ -11,18 +13,20 @@ struct OnboardingView: View {
                 .tag(0)
             HowItWorksPage(onNext: { withAnimation { page = 2 } })
                 .tag(1)
-            GoalPage(goal: $dailyStepGoal, onFinish: {
+            GoalPage(goal: $dailyStepGoal, onNext: { withAnimation { page = 3 } })
+                .tag(2)
+            CalibrationPage(onFinish: {
                 Task {
                     try? await HealthKitService().requestPermission()
                     hasCompletedOnboarding = true
                 }
             })
-            .tag(2)
+            .tag(3)
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .ignoresSafeArea()
         .overlay(alignment: .top) {
-            PageIndicator(count: 3, current: page)
+            PageIndicator(count: 4, current: page)
                 .padding(.top, 60)
         }
     }
@@ -132,7 +136,7 @@ private struct HowItWorksPage: View {
 
 private struct GoalPage: View {
     @Binding var goal: Int
-    let onFinish: () -> Void
+    let onNext: () -> Void
 
     private let presets = [200, 400, 600, 800, 1000]
 
@@ -201,18 +205,197 @@ private struct GoalPage: View {
 
             Spacer()
 
-            VStack(spacing: 10) {
-                OnboardingButton(title: "Let's Go", action: onFinish)
+            OnboardingButton(title: "Continue", action: onNext)
+                .padding(.horizontal, 32)
+                .padding(.bottom, 52)
+        }
+    }
+}
 
-                Text("Elevate will request Health access to read your body mass and save climbing sessions.")
+// MARK: - Page 4: Calibration
+
+private final class AltimeterRecorder: ObservableObject {
+    private let altimeter = CMAltimeter()
+    private let queue = OperationQueue()
+    private var lastAltitude: Double?
+    @Published var altitudeGain: Double = 0
+
+    func start() {
+        altitudeGain = 0
+        lastAltitude = nil
+        guard CMAltimeter.isRelativeAltitudeAvailable() else { return }
+        altimeter.startRelativeAltitudeUpdates(to: queue) { [weak self] data, _ in
+            guard let self, let data else { return }
+            let alt = data.relativeAltitude.doubleValue
+            DispatchQueue.main.async {
+                if let last = self.lastAltitude {
+                    let delta = alt - last
+                    if delta > 0 { self.altitudeGain += delta }
+                }
+                self.lastAltitude = alt
+            }
+        }
+    }
+
+    func stop() { altimeter.stopRelativeAltitudeUpdates() }
+}
+
+private struct CalibrationPage: View {
+    let onFinish: () -> Void
+
+    @StateObject private var recorder = AltimeterRecorder()
+    @AppStorage("riserHeightMeters") private var savedRiserHeight: Double = 0.175
+    @State private var phase: Phase = .idle
+    @State private var countdown = 15
+    @State private var stepCount = 14
+    @State private var countdownTask: Task<Void, Never>?
+
+    enum Phase { case idle, recording, review }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Spacer()
+
+            // Icon / countdown / checkmark
+            ZStack {
+                Circle()
+                    .fill(iconColor.opacity(0.15))
+                    .frame(width: 120, height: 120)
+                switch phase {
+                case .idle:
+                    Image(systemName: "stairs")
+                        .font(.system(size: 52))
+                        .foregroundStyle(iconColor)
+                case .recording:
+                    Text("\(countdown)")
+                        .font(.system(size: 52, weight: .heavy, design: .rounded))
+                        .foregroundStyle(iconColor)
+                        .contentTransition(.numericText())
+                case .review:
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 48, weight: .bold))
+                        .foregroundStyle(.green)
+                }
+            }
+            .animation(.easeInOut(duration: 0.3), value: phase == .review)
+
+            Spacer()
+
+            // Content
+            VStack(spacing: 12) {
+                switch phase {
+                case .idle:
+                    Text("Calibrate Your Stairs")
+                        .font(.system(size: 32, weight: .heavy, design: .rounded))
+                        .multilineTextAlignment(.center)
+                    Text("Stand at the bottom of a staircase, tap Start, then climb one full flight at your normal pace.")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(4)
+
+                case .recording:
+                    Text("Keep climbing!")
+                        .font(.system(size: 32, weight: .heavy, design: .rounded))
+                    Text(String(format: "%.2f m gained", recorder.altitudeGain))
+                        .font(.system(size: 22, weight: .bold, design: .rounded))
+                        .foregroundStyle(.purple)
+                        .contentTransition(.numericText())
+                    Text("Tap Done when you reach the top")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+
+                case .review:
+                    Text(recorder.altitudeGain > 0.1 ? "Nice climb!" : "Ready to go!")
+                        .font(.system(size: 32, weight: .heavy, design: .rounded))
+                    if recorder.altitudeGain > 0.1 {
+                        Text(String(format: "Measured %.2f m of altitude gain.", recorder.altitudeGain))
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                        VStack(spacing: 6) {
+                            Text("How many steps was that flight?")
+                                .font(.subheadline.bold())
+                            Stepper("\(stepCount) steps", value: $stepCount, in: 4...40)
+                                .font(.system(.body, design: .rounded).bold())
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 12)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                    } else {
+                        Text("No altitude data was detected. This may happen on a device without a barometer.")
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+            }
+            .padding(.horizontal, 32)
+
+            Spacer()
+
+            // Buttons
+            VStack(spacing: 12) {
+                switch phase {
+                case .idle:
+                    OnboardingButton(title: "Start Calibration") { startRecording() }
+                    skipButton
+                case .recording:
+                    OnboardingButton(title: "Done — I'm at the top") { finishRecording() }
+                case .review:
+                    OnboardingButton(
+                        title: recorder.altitudeGain > 0.1 ? "Save & Continue" : "Continue"
+                    ) { saveAndFinish() }
+                    if recorder.altitudeGain > 0.1 { skipButton }
+                }
+
+                Text("Elevate will request Health access to save your climbing sessions.")
                     .font(.caption)
                     .foregroundStyle(.tertiary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 8)
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 52)
         }
+    }
+
+    private var iconColor: Color {
+        phase == .review ? .green : .purple
+    }
+
+    private var skipButton: some View {
+        Button("Skip for now", action: onFinish)
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
+    }
+
+    private func startRecording() {
+        withAnimation { phase = .recording }
+        countdown = 15
+        recorder.start()
+        countdownTask = Task {
+            for remaining in stride(from: 14, through: 0, by: -1) {
+                try? await Task.sleep(for: .seconds(1))
+                guard !Task.isCancelled else { return }
+                await MainActor.run { countdown = remaining }
+            }
+            await MainActor.run { finishRecording() }
+        }
+    }
+
+    private func finishRecording() {
+        countdownTask?.cancel()
+        recorder.stop()
+        withAnimation { phase = .review }
+    }
+
+    private func saveAndFinish() {
+        if recorder.altitudeGain > 0.1, stepCount > 0 {
+            savedRiserHeight = recorder.altitudeGain / Double(stepCount)
+        }
+        onFinish()
     }
 }
 

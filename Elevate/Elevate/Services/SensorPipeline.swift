@@ -13,8 +13,8 @@ final class SensorPipeline: ObservableObject {
     @Published private(set) var elevationMeters: Double = 0
     @Published private(set) var isClimbing: Bool = false
 
-    // Tuning constants
-    private let riserHeightMeters: Double = 0.175   // standard stair riser
+    // Tuning constants — riserHeightMeters is calibrated per user in onboarding
+    private var riserHeightMeters: Double = 0.175
     private let floorHeightMeters: Double = 3.0     // ~10 ft per floor
 
     private let altimeter = CMAltimeter()
@@ -33,6 +33,8 @@ final class SensorPipeline: ObservableObject {
 
     func start() {
         guard sessionStart == nil else { return }
+        let saved = UserDefaults.standard.double(forKey: "riserHeightMeters")
+        riserHeightMeters = saved > 0.05 ? saved : 0.175
         steps = 0
         floors = 0
         elevationMeters = 0
