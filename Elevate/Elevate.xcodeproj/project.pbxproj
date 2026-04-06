@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B161A30C2F8111260033FCF7 /* ElevateWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B161A3002F8111240033FCF7 /* ElevateWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B161AA172F84088A0033FCF7 /* ElevateShared in Frameworks */ = {isa = PBXBuildFile; productRef = B161A30E2F8111260033FCF7 /* ElevateShared */; };
+		B161AA182F84088A0033FCF7 /* ElevateShared in Frameworks */ = {isa = PBXBuildFile; productRef = B161A30F2F8111260033FCF7 /* ElevateShared */; };
+		B1C85DBB2F84127300F26C4E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DBA2F84127300F26C4E /* Auth */; };
+		B1C85DBD2F84127300F26C4E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DBC2F84127300F26C4E /* Functions */; };
+		B1C85DBF2F84127300F26C4E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DBE2F84127300F26C4E /* PostgREST */; };
+		B1C85DC12F84127300F26C4E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC02F84127300F26C4E /* Realtime */; };
+		B1C85DC32F84127300F26C4E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC22F84127300F26C4E /* Storage */; };
+		B1C85DC42F84127300F26C4E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC52F84127300F26C4E /* Supabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B161A1A02F8111260033FCF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B161A1882F8111240033FCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B161A18F2F8111240033FCF7;
+			remoteInfo = Elevate;
+		};
+		B161A1AA2F8111260033FCF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B161A1882F8111240033FCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B161A18F2F8111240033FCF7;
+			remoteInfo = Elevate;
+		};
+		B161A30A2F8111260033FCF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B161A1882F8111240033FCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B161A3052F8111240033FCF7;
+			remoteInfo = ElevateWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B161A30B2F8111240033FCF7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B161A30C2F8111260033FCF7 /* ElevateWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B161A1902F8111240033FCF7 /* Elevate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B161A19F2F8111260033FCF7 /* ElevateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B161A3002F8111240033FCF7 /* ElevateWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ElevateWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B161A1922F8111240033FCF7 /* Elevate */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Elevate;
+			sourceTree = "<group>";
+		};
+		B161A1A22F8111260033FCF7 /* ElevateTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElevateTests;
+			sourceTree = "<group>";
+		};
+		B161A1AC2F8111260033FCF7 /* ElevateUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElevateUITests;
+			sourceTree = "<group>";
+		};
+		B161A3012F8111240033FCF7 /* ElevateWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElevateWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B161A18D2F8111240033FCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C85DC42F84127300F26C4E /* Supabase in Frameworks */,
+				B1C85DC32F84127300F26C4E /* Storage in Frameworks */,
+				B1C85DBF2F84127300F26C4E /* PostgREST in Frameworks */,
+				B1C85DBD2F84127300F26C4E /* Functions in Frameworks */,
+				B1C85DBB2F84127300F26C4E /* Auth in Frameworks */,
+				B1C85DC12F84127300F26C4E /* Realtime in Frameworks */,
+				B161AA172F84088A0033FCF7 /* ElevateShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A19C2F8111260033FCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A1A62F8111260033FCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A3032F8111240033FCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B161AA182F84088A0033FCF7 /* ElevateShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B161A1872F8111240033FCF7 = {
+			isa = PBXGroup;
+			children = (
+				B161A1922F8111240033FCF7 /* Elevate */,
+				B161A1A22F8111260033FCF7 /* ElevateTests */,
+				B161A1AC2F8111260033FCF7 /* ElevateUITests */,
+				B161A3012F8111240033FCF7 /* ElevateWidget */,
+				B161A1912F8111240033FCF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B161A1912F8111240033FCF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B161A1902F8111240033FCF7 /* Elevate.app */,
+				B161A19F2F8111260033FCF7 /* ElevateTests.xctest */,
+				B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */,
+				B161A3002F8111240033FCF7 /* ElevateWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B161A18F2F8111240033FCF7 /* Elevate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B161A1B32F8111260033FCF7 /* Build configuration list for PBXNativeTarget "Elevate" */;
+			buildPhases = (
+				B161A18C2F8111240033FCF7 /* Sources */,
+				B161A18D2F8111240033FCF7 /* Frameworks */,
+				B161A18E2F8111240033FCF7 /* Resources */,
+				B161A30B2F8111240033FCF7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B161A3102F8111260033FCF7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B161A1922F8111240033FCF7 /* Elevate */,
+			);
+			name = Elevate;
+			packageProductDependencies = (
+				B161A30E2F8111260033FCF7 /* ElevateShared */,
+				B1C85DBA2F84127300F26C4E /* Auth */,
+				B1C85DBC2F84127300F26C4E /* Functions */,
+				B1C85DBE2F84127300F26C4E /* PostgREST */,
+				B1C85DC02F84127300F26C4E /* Realtime */,
+				B1C85DC22F84127300F26C4E /* Storage */,
+				B1C85DC52F84127300F26C4E /* Supabase */,
+			);
+			productName = Elevate;
+			productReference = B161A1902F8111240033FCF7 /* Elevate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B161A19E2F8111260033FCF7 /* ElevateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B161A1B62F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateTests" */;
+			buildPhases = (
+				B161A19B2F8111260033FCF7 /* Sources */,
+				B161A19C2F8111260033FCF7 /* Frameworks */,
+				B161A19D2F8111260033FCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B161A1A12F8111260033FCF7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B161A1A22F8111260033FCF7 /* ElevateTests */,
+			);
+			name = ElevateTests;
+			packageProductDependencies = (
+			);
+			productName = ElevateTests;
+			productReference = B161A19F2F8111260033FCF7 /* ElevateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B161A1A82F8111260033FCF7 /* ElevateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B161A1B92F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateUITests" */;
+			buildPhases = (
+				B161A1A52F8111260033FCF7 /* Sources */,
+				B161A1A62F8111260033FCF7 /* Frameworks */,
+				B161A1A72F8111260033FCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B161A1AB2F8111260033FCF7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B161A1AC2F8111260033FCF7 /* ElevateUITests */,
+			);
+			name = ElevateUITests;
+			packageProductDependencies = (
+			);
+			productName = ElevateUITests;
+			productReference = B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B161A3052F8111240033FCF7 /* ElevateWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B161A3082F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateWidget" */;
+			buildPhases = (
+				B161A3022F8111240033FCF7 /* Sources */,
+				B161A3032F8111240033FCF7 /* Frameworks */,
+				B161A3042F8111240033FCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B161A3012F8111240033FCF7 /* ElevateWidget */,
+			);
+			name = ElevateWidget;
+			packageProductDependencies = (
+				B161A30F2F8111260033FCF7 /* ElevateShared */,
+			);
+			productName = ElevateWidget;
+			productReference = B161A3002F8111240033FCF7 /* ElevateWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B161A1882F8111240033FCF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					B161A18F2F8111240033FCF7 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					B161A19E2F8111260033FCF7 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = B161A18F2F8111240033FCF7;
+					};
+					B161A1A82F8111260033FCF7 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = B161A18F2F8111240033FCF7;
+					};
+					B161A3052F8111240033FCF7 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = B161A18B2F8111240033FCF7 /* Build configuration list for PBXProject "Elevate" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B161A1872F8111240033FCF7;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B161A30D2F8111240033FCF7 /* XCLocalSwiftPackageReference "ElevateShared" */,
+				B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B161A1912F8111240033FCF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B161A18F2F8111240033FCF7 /* Elevate */,
+				B161A19E2F8111260033FCF7 /* ElevateTests */,
+				B161A1A82F8111260033FCF7 /* ElevateUITests */,
+				B161A3052F8111240033FCF7 /* ElevateWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B161A18E2F8111240033FCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A19D2F8111260033FCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A1A72F8111260033FCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A3042F8111240033FCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B161A18C2F8111240033FCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A19B2F8111260033FCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A1A52F8111260033FCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161A3022F8111240033FCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B161A1A12F8111260033FCF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B161A18F2F8111240033FCF7 /* Elevate */;
+			targetProxy = B161A1A02F8111260033FCF7 /* PBXContainerItemProxy */;
+		};
+		B161A1AB2F8111260033FCF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B161A18F2F8111240033FCF7 /* Elevate */;
+			targetProxy = B161A1AA2F8111260033FCF7 /* PBXContainerItemProxy */;
+		};
+		B161A3102F8111260033FCF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B161A3052F8111240033FCF7 /* ElevateWidget */;
+			targetProxy = B161A30A2F8111260033FCF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B161A1B12F8111260033FCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B161A1B22F8111260033FCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B161A1B42F8111260033FCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Elevate/Elevate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Elevate reads your body mass to estimate calories burned.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Elevate saves your stair climbing sessions to Apple Health.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Elevate uses the accelerometer and barometer to count stair steps.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B161A1B52F8111260033FCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Elevate/Elevate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Elevate reads your body mass to estimate calories burned.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Elevate saves your stair climbing sessions to Apple Health.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Elevate uses the accelerometer and barometer to count stair steps.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B161A1B72F8111260033FCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.ElevateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elevate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Elevate";
+			};
+			name = Debug;
+		};
+		B161A1B82F8111260033FCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.ElevateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elevate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Elevate";
+			};
+			name = Release;
+		};
+		B161A1BA2F8111260033FCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.ElevateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Elevate;
+			};
+			name = Debug;
+		};
+		B161A1BB2F8111260033FCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.ElevateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Elevate;
+			};
+			name = Release;
+		};
+		B161A3062F8111260033FCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ElevateWidget/ElevateWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				INFOPLIST_FILE = ElevateWidgetInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate.ElevateWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B161A3072F8111260033FCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ElevateWidget/ElevateWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				INFOPLIST_FILE = ElevateWidgetInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate.ElevateWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B161A18B2F8111240033FCF7 /* Build configuration list for PBXProject "Elevate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B161A1B12F8111260033FCF7 /* Debug */,
+				B161A1B22F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B161A1B32F8111260033FCF7 /* Build configuration list for PBXNativeTarget "Elevate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B161A1B42F8111260033FCF7 /* Debug */,
+				B161A1B52F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B161A1B62F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B161A1B72F8111260033FCF7 /* Debug */,
+				B161A1B82F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B161A1B92F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B161A1BA2F8111260033FCF7 /* Debug */,
+				B161A1BB2F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B161A3082F8111260033FCF7 /* Build configuration list for PBXNativeTarget "ElevateWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B161A3062F8111260033FCF7 /* Debug */,
+				B161A3072F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B161A30D2F8111240033FCF7 /* XCLocalSwiftPackageReference "ElevateShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ElevateShared;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B161A30E2F8111260033FCF7 /* ElevateShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B161A30D2F8111240033FCF7 /* XCLocalSwiftPackageReference "ElevateShared" */;
+			productName = ElevateShared;
+		};
+		B161A30F2F8111260033FCF7 /* ElevateShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B161A30D2F8111240033FCF7 /* XCLocalSwiftPackageReference "ElevateShared" */;
+			productName = ElevateShared;
+		};
+		B1C85DBA2F84127300F26C4E /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		B1C85DBC2F84127300F26C4E /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		B1C85DBE2F84127300F26C4E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		B1C85DC02F84127300F26C4E /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		B1C85DC22F84127300F26C4E /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		B1C85DC52F84127300F26C4E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C85DB92F84127300F26C4E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B161A1882F8111240033FCF7 /* Project object */;
+}

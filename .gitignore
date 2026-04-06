@@ -1,0 +1,32 @@
+# Xcode
+*.xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivefile
+xcuserdata/
+*.xccheckout
+*.moved-aside
+
+# Swift Package Manager
+.build/
+*.resolved
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Claude Code internals
+.superpowers/
+.claude/
+
+# Secrets (just in case)
+.env
+.env.local

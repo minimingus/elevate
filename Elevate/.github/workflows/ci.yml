@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show build environment
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available | grep "iPhone 1" | head -5
+
+      - name: Build
+        run: |
+          xcodebuild build \
+            -scheme Elevate \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -quiet
+
+      - name: Test
+        run: |
+          xcodebuild test \
+            -scheme Elevate \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -only-testing:ElevateTests \
+            -quiet \
+            -resultBundlePath TestResults.xcresult
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults.xcresult
+          retention-days: 7
