@@ -7,7 +7,7 @@ struct SessionSummary: Identifiable {
     let id = UUID()
     let steps: Int
     let floors: Int
-    let calories: Double
+    let elevationMeters: Double
     let duration: TimeInterval
     let newlyUnlocked: [Achievement]
 }
@@ -17,9 +17,15 @@ final class TrackingViewModel: ObservableObject {
     @Published private(set) var isRunning: Bool = false
     @Published private(set) var steps: Int = 0
     @Published private(set) var floors: Int = 0
+    @Published private(set) var elevationMeters: Double = 0
     @Published private(set) var elapsedTime: TimeInterval = 0
-    @Published private(set) var calories: Double = 0
     @Published var summary: SessionSummary? = nil
+
+    /// Steps per minute — 0 until at least 1 minute has elapsed
+    var pace: Double {
+        guard elapsedTime >= 1 else { return 0 }
+        return Double(steps) / (elapsedTime / 60.0)
+    }
 
     private let pipeline: SensorPipeline
     private let sessionRepo: SessionRepository
@@ -28,7 +34,6 @@ final class TrackingViewModel: ObservableObject {
     private var startDate: Date?
     private var timer: AnyCancellable?
     private var pipelineCancellables = Set<AnyCancellable>()
-    private var weightKg: Double = 70.0
     private var goalHapticFired = false
 
     init(pipeline: SensorPipeline, sessionRepo: SessionRepository,
@@ -43,7 +48,6 @@ final class TrackingViewModel: ObservableObject {
         guard !isRunning else { return }
         pipelineCancellables.removeAll()
         timer?.cancel()
-        weightKg = await healthKit.bodyMassKg() ?? 70.0
         isRunning = true
         let now = Date()
         startDate = now
@@ -57,7 +61,6 @@ final class TrackingViewModel: ObservableObject {
                 guard let self else { return }
                 let previous = self.steps
                 self.steps = s
-                self.calories = CalorieEstimator.calories(steps: s, weightKg: self.weightKg)
                 if s > previous { HapticService.step() }
                 let goal = UserDefaults.standard.dailyStepGoal
                 if !self.goalHapticFired && goal > 0 && s >= goal {
@@ -70,6 +73,11 @@ final class TrackingViewModel: ObservableObject {
         pipeline.$floors
             .receive(on: RunLoop.main)
             .sink { [weak self] f in self?.floors = f }
+            .store(in: &pipelineCancellables)
+
+        pipeline.$elevationMeters
+            .receive(on: RunLoop.main)
+            .sink { [weak self] e in self?.elevationMeters = e }
             .store(in: &pipelineCancellables)
 
         timer = Timer.publish(every: 1, on: .main, in: .common)
@@ -95,7 +103,7 @@ final class TrackingViewModel: ObservableObject {
         timer?.cancel()
         timer = nil
         pipelineCancellables.removeAll()
-        let (finalSteps, finalFloors) = pipeline.stop()
+        let (finalSteps, finalFloors, finalElevation) = pipeline.stop()
         let end = Date()
         let start = startDate ?? end
         isRunning = false
@@ -103,7 +111,7 @@ final class TrackingViewModel: ObservableObject {
         let session = ClimbSession(
             startDate: start, endDate: end,
             steps: finalSteps, floors: finalFloors,
-            calories: CalorieEstimator.calories(steps: finalSteps, weightKg: weightKg)
+            elevationMeters: finalElevation
         )
 
         try? sessionRepo.save(session)
@@ -134,7 +142,7 @@ final class TrackingViewModel: ObservableObject {
 
         summary = SessionSummary(
             steps: finalSteps, floors: finalFloors,
-            calories: session.calories,
+            elevationMeters: finalElevation,
             duration: session.duration,
             newlyUnlocked: newAchievements
         )

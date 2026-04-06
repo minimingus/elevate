@@ -45,7 +45,7 @@ final class HistoryViewModel: ObservableObject {
                     endDate: row.endDate,
                     steps: row.steps,
                     floors: row.floors,
-                    calories: row.calories
+                    elevationMeters: row.elevationMeters
                 )
                 try? sessionRepo.save(session)
                 didInsert = true

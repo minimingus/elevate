@@ -10,14 +10,15 @@ struct SessionRow: Codable {
     let endDate: Date
     let steps: Int
     let floors: Int
-    let calories: Double
+    let elevationMeters: Double
 
     enum CodingKeys: String, CodingKey {
         case id
         case userId = "user_id"
         case startDate = "start_date"
         case endDate = "end_date"
-        case steps, floors, calories
+        case steps, floors
+        case elevationMeters = "elevation_meters"
     }
 }
 
@@ -97,7 +98,7 @@ actor SupabaseService {
             endDate: session.endDate,
             steps: session.steps,
             floors: session.floors,
-            calories: session.calories
+            elevationMeters: session.elevationMeters
         )
         try await client.from("climb_sessions").upsert(row).execute()
     }

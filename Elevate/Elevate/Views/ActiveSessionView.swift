@@ -65,7 +65,7 @@ struct ActiveSessionView: View {
             Spacer().frame(height: 32)
 
             // MARK: Stats cards
-            HStack(spacing: 12) {
+            HStack(spacing: 10) {
                 SessionStatCard(
                     icon: "building.2.fill",
                     value: "\(trackingVM.floors)",
@@ -73,9 +73,15 @@ struct ActiveSessionView: View {
                     color: .blue
                 )
                 SessionStatCard(
-                    icon: "flame.fill",
-                    value: "\(Int(trackingVM.calories))",
-                    label: "Calories",
+                    icon: "arrow.up.right",
+                    value: formatElevation(trackingVM.elevationMeters),
+                    label: "Elevation",
+                    color: .green
+                )
+                SessionStatCard(
+                    icon: "speedometer",
+                    value: trackingVM.pace < 1 ? "—" : "\(Int(trackingVM.pace))",
+                    label: "spm",
                     color: .orange
                 )
             }
@@ -108,6 +114,11 @@ struct ActiveSessionView: View {
             .padding(.bottom, 24)
         }
         .onAppear { pulse = true }
+    }
+
+    private func formatElevation(_ m: Double) -> String {
+        if m < 10 { return String(format: "%.1fm", m) }
+        return "\(Int(m))m"
     }
 
     private func formatDuration(_ t: TimeInterval) -> String {

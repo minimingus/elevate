@@ -10,6 +10,7 @@ import UIKit
 final class SensorPipeline: ObservableObject {
     @Published private(set) var steps: Int = 0
     @Published private(set) var floors: Int = 0
+    @Published private(set) var elevationMeters: Double = 0
     @Published private(set) var isClimbing: Bool = false
 
     // Tuning constants
@@ -34,6 +35,7 @@ final class SensorPipeline: ObservableObject {
         guard sessionStart == nil else { return }
         steps = 0
         floors = 0
+        elevationMeters = 0
         isClimbing = false
         lastAltitude = nil
         altitudeGainMeters = 0
@@ -48,7 +50,7 @@ final class SensorPipeline: ObservableObject {
         startPedometer()
     }
 
-    func stop() -> (steps: Int, floors: Int) {
+    func stop() -> (steps: Int, floors: Int, elevationMeters: Double) {
         altimeter.stopRelativeAltitudeUpdates()
         pedometer.stopUpdates()
         sessionStart = nil
@@ -56,7 +58,7 @@ final class SensorPipeline: ObservableObject {
             UIApplication.shared.endBackgroundTask(backgroundTask)
             backgroundTask = .invalid
         }
-        return (steps, floors)
+        return (steps, floors, elevationMeters)
     }
 
     // MARK: - Private
@@ -87,6 +89,7 @@ final class SensorPipeline: ObservableObject {
                 steps = newSteps
             }
             floors = Int(altitudeGainMeters / floorHeightMeters)
+            elevationMeters = altitudeGainMeters
             isClimbing = true
             lastClimbTime = Date()
         } else if Date().timeIntervalSince(lastClimbTime) > 2.0 {

@@ -56,6 +56,11 @@ struct ShareCard: View {
         return String(format: "%d:%02d", m, s)
     }
 
+    private func formatElevationShare(_ m: Double) -> String {
+        if m < 10 { return String(format: "%.1fm", m) }
+        return "\(Int(m))m"
+    }
+
     var body: some View {
         ZStack {
             Color(red: 10/255, green: 10/255, blue: 11/255)
@@ -100,7 +105,7 @@ struct ShareCard: View {
                         Divider().frame(height: 36).background(Color(.systemGray4))
                         CardStat(value: formatDuration(summary.duration), label: "time")
                         Divider().frame(height: 36).background(Color(.systemGray4))
-                        CardStat(value: "\(Int(summary.calories))", label: "cal")
+                        CardStat(value: formatElevationShare(summary.elevationMeters), label: "elev")
                     }
 
                     // Landmark
@@ -189,9 +194,15 @@ struct SessionSummaryView: View {
                         color: .purple
                     )
                     SummaryStatCell(
-                        value: "\(Int(summary.calories))",
-                        label: "Calories",
-                        icon: "flame.fill",
+                        value: formatElevation(summary.elevationMeters),
+                        label: "Elevation",
+                        icon: "arrow.up.right",
+                        color: .green
+                    )
+                    SummaryStatCell(
+                        value: formatPace(steps: summary.steps, duration: summary.duration),
+                        label: "Pace (spm)",
+                        icon: "speedometer",
                         color: .orange
                     )
                 }
@@ -317,6 +328,17 @@ struct SessionSummaryView: View {
         let m = Int(t) / 60
         let s = Int(t) % 60
         return String(format: "%d:%02d", m, s)
+    }
+
+    private func formatElevation(_ m: Double) -> String {
+        if m < 10 { return String(format: "%.1fm", m) }
+        return "\(Int(m))m"
+    }
+
+    private func formatPace(steps: Int, duration: TimeInterval) -> String {
+        guard duration >= 1 else { return "—" }
+        let spm = Double(steps) / (duration / 60.0)
+        return spm < 1 ? "—" : "\(Int(spm))"
     }
 
     @MainActor

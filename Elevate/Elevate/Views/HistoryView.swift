@@ -114,8 +114,8 @@ private struct HistorySessionRow: View {
                 HStack(spacing: 10) {
                     Label("\(session.floors) floor\(session.floors == 1 ? "" : "s")", systemImage: "building.2.fill")
                     Label(formatDuration(session.duration), systemImage: "clock")
-                    if session.calories > 0 {
-                        Label("\(Int(session.calories)) cal", systemImage: "flame.fill")
+                    if session.elevationMeters > 0 {
+                        Label(formatElevation(session.elevationMeters), systemImage: "arrow.up.right")
                     }
                 }
                 .font(.caption)
@@ -146,5 +146,10 @@ private struct HistorySessionRow: View {
         let s = Int(t) % 60
         if m == 0 { return "\(s)s" }
         return "\(m)m \(s)s"
+    }
+
+    private func formatElevation(_ m: Double) -> String {
+        if m < 10 { return String(format: "%.1fm", m) }
+        return "\(Int(m))m"
     }
 }

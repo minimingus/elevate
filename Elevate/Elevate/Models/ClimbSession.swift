@@ -8,7 +8,7 @@ final class ClimbSession {
     var endDate: Date
     var steps: Int
     var floors: Int
-    var calories: Double
+    var elevationMeters: Double
     var type: ClimbType
     var shareToken: String?
 
@@ -20,7 +20,7 @@ final class ClimbSession {
         endDate: Date,
         steps: Int,
         floors: Int,
-        calories: Double,
+        elevationMeters: Double,
         type: ClimbType = .stairs,
         shareToken: String? = nil
     ) {
@@ -29,7 +29,7 @@ final class ClimbSession {
         self.endDate = endDate
         self.steps = steps
         self.floors = floors
-        self.calories = calories
+        self.elevationMeters = elevationMeters
         self.type = type
         self.shareToken = shareToken
     }
