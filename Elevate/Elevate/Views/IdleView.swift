@@ -27,17 +27,10 @@ struct IdleView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                HStack(spacing: 12) {
-                    if historyVM.currentStreak > 0 {
-                        Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
-                            .font(.title2.bold())
-                            .foregroundStyle(.orange)
-                    }
-                    Button { showSettings = true } label: {
-                        Image(systemName: "gearshape.fill")
-                            .font(.title2)
-                            .foregroundStyle(.secondary)
-                    }
+                if historyVM.currentStreak > 0 {
+                    Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
+                        .font(.title2.bold())
+                        .foregroundStyle(.orange)
                 }
             }
             .padding(.horizontal)
@@ -73,13 +66,17 @@ struct IdleView: View {
                                     .font(.caption.bold())
                             }
                         }
-                        Label("Goal: \(dailyStepGoal)", systemImage: "target")
-                            .font(.caption.bold())
-                            .foregroundStyle(.green)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(Color.green.opacity(0.15))
-                            .clipShape(Capsule())
+                        Button {
+                            showSettings = true
+                        } label: {
+                            Label("Goal: \(dailyStepGoal)", systemImage: "target")
+                                .font(.caption.bold())
+                                .foregroundStyle(.green)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(Color.green.opacity(0.15))
+                                .clipShape(Capsule())
+                        }
                     }
                 }
 
