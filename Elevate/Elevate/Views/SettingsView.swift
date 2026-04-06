@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("dailyStepGoal") private var dailyStepGoal: Int = 400
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = true
     @Environment(\.dismiss) private var dismiss
     let onGoalChanged: () -> Void
 
@@ -54,6 +55,15 @@ struct SettingsView: View {
                     LabeledContent("Version", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—")
                     LabeledContent("Build", value: Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "—")
                 }
+
+                #if DEBUG
+                Section("Developer") {
+                    Button("Reset Onboarding", role: .destructive) {
+                        hasCompletedOnboarding = false
+                        dismiss()
+                    }
+                }
+                #endif
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
