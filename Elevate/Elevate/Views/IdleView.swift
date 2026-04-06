@@ -73,17 +73,13 @@ struct IdleView: View {
                                     .font(.caption.bold())
                             }
                         }
-                        Button {
-                            showSettings = true
-                        } label: {
-                            Label("Goal: \(dailyStepGoal)", systemImage: "target")
-                                .font(.caption.bold())
-                                .foregroundStyle(.green)
-                                .padding(.horizontal, 10)
-                                .padding(.vertical, 5)
-                                .background(Color.green.opacity(0.15))
-                                .clipShape(Capsule())
-                        }
+                        Label("Goal: \(dailyStepGoal)", systemImage: "target")
+                            .font(.caption.bold())
+                            .foregroundStyle(.green)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(Color.green.opacity(0.15))
+                            .clipShape(Capsule())
                     }
                 }
 
