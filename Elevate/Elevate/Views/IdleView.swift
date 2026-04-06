@@ -5,6 +5,7 @@ struct IdleView: View {
     let onStart: () -> Void
     let onHistory: () -> Void
     let onAchievements: () -> Void
+    let onLeaderboard: () -> Void
 
     @State private var showSettings = false
     @AppStorage("dailyStepGoal") private var dailyStepGoal: Int = 400
@@ -167,6 +168,14 @@ struct IdleView: View {
                 }
                 Button(action: onAchievements) {
                     Label("Badges", systemImage: "trophy.fill")
+                        .font(.subheadline.bold())
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 13)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                }
+                Button(action: onLeaderboard) {
+                    Label("Ranks", systemImage: "list.number")
                         .font(.subheadline.bold())
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 13)

@@ -21,6 +21,29 @@ struct SessionRow: Codable {
     }
 }
 
+struct UserProfile: Codable {
+    let userId: UUID
+    let displayName: String
+
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case displayName = "display_name"
+    }
+}
+
+struct LeaderboardEntry: Codable, Identifiable {
+    let displayName: String
+    let weeklySteps: Int
+    let rank: Int
+    var id: String { displayName }
+
+    enum CodingKeys: String, CodingKey {
+        case displayName = "display_name"
+        case weeklySteps = "weekly_steps"
+        case rank
+    }
+}
+
 struct AchievementRow: Codable {
     let userId: UUID
     let achievementId: String
@@ -108,6 +131,44 @@ actor SupabaseService {
             .select()
             .execute()
             .value
+    }
+
+    // MARK: - Profile
+
+    func fetchProfile() async throws -> UserProfile? {
+        try await ensureSignedIn()
+        let userId = try currentUserId
+        let profiles: [UserProfile] = try await client
+            .from("user_profiles")
+            .select()
+            .eq("user_id", value: userId)
+            .limit(1)
+            .execute()
+            .value
+        return profiles.first
+    }
+
+    func saveProfile(displayName: String) async throws {
+        try await ensureSignedIn()
+        let profile = UserProfile(userId: try currentUserId, displayName: displayName)
+        try await client.from("user_profiles").upsert(profile).execute()
+    }
+
+    func deleteProfile() async throws {
+        try await ensureSignedIn()
+        let userId = try currentUserId
+        try await client
+            .from("user_profiles")
+            .delete()
+            .eq("user_id", value: userId)
+            .execute()
+    }
+
+    // MARK: - Leaderboard
+
+    func fetchLeaderboard() async throws -> [LeaderboardEntry] {
+        try await ensureSignedIn()
+        return try await client.rpc("weekly_leaderboard").execute().value
     }
 }
 
