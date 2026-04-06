@@ -51,6 +51,20 @@ struct SettingsView: View {
                     Text("Streak and progress are calculated against this goal.")
                 }
 
+                Section {
+                    NavigationLink {
+                        CalibrationPage(onFinish: { dismiss() })
+                            .navigationTitle("Calibrate")
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        Label("Calibrate Step Detection", systemImage: "ruler")
+                    }
+                } header: {
+                    Text("Advanced")
+                } footer: {
+                    Text("Walk up one flight of stairs to fine-tune step counting for your specific staircase.")
+                }
+
                 Section("About") {
                     LabeledContent("Version", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—")
                     LabeledContent("Build", value: Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "—")

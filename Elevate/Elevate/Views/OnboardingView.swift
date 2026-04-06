@@ -13,20 +13,18 @@ struct OnboardingView: View {
                 .tag(0)
             HowItWorksPage(onNext: { withAnimation { page = 2 } })
                 .tag(1)
-            GoalPage(goal: $dailyStepGoal, onNext: { withAnimation { page = 3 } })
-                .tag(2)
-            CalibrationPage(onFinish: {
+            GoalPage(goal: $dailyStepGoal, onNext: {
                 Task {
                     try? await HealthKitService().requestPermission()
                     hasCompletedOnboarding = true
                 }
             })
-            .tag(3)
+            .tag(2)
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .ignoresSafeArea()
         .overlay(alignment: .top) {
-            PageIndicator(count: 4, current: page)
+            PageIndicator(count: 3, current: page)
                 .padding(.top, 60)
         }
     }
@@ -136,7 +134,7 @@ private struct HowItWorksPage: View {
 
 private struct GoalPage: View {
     @Binding var goal: Int
-    let onNext: () -> Void
+    let onNext: () -> Void  // triggers HK permission + completes onboarding
 
     private let presets = [200, 400, 600, 800, 1000]
 
@@ -205,14 +203,21 @@ private struct GoalPage: View {
 
             Spacer()
 
-            OnboardingButton(title: "Continue", action: onNext)
-                .padding(.horizontal, 32)
-                .padding(.bottom, 52)
+            VStack(spacing: 10) {
+                OnboardingButton(title: "Let's Go", action: onNext)
+                Text("Elevate will request Health access to save your climbing sessions.")
+                    .font(.caption)
+                    .foregroundStyle(.tertiary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 16)
+            }
+            .padding(.horizontal, 32)
+            .padding(.bottom, 52)
         }
     }
 }
 
-// MARK: - Page 4: Calibration
+// MARK: - Calibration (advanced, accessible from Settings)
 
 private final class AltimeterRecorder: ObservableObject {
     private let altimeter = CMAltimeter()
@@ -240,7 +245,7 @@ private final class AltimeterRecorder: ObservableObject {
     func stop() { altimeter.stopRelativeAltitudeUpdates() }
 }
 
-private struct CalibrationPage: View {
+struct CalibrationPage: View {
     let onFinish: () -> Void
 
     @StateObject private var recorder = AltimeterRecorder()
