@@ -10,7 +10,7 @@ struct ElevateApp: App {
 
     init() {
         do {
-            let c = try ModelContainer(for: ClimbSession.self, Achievement.self)
+            let c = try Self.makeContainer()
             container = c
             let sessionRepo = SessionRepository(modelContext: c.mainContext)
             let achievementRepo = AchievementRepository(modelContext: c.mainContext)
@@ -30,6 +30,24 @@ struct ElevateApp: App {
             ))
         } catch {
             fatalError("Failed to create ModelContainer: \(error)")
+        }
+    }
+
+    /// Attempts to open the SwiftData store; if the schema has changed and
+    /// migration fails, deletes the local store and creates a fresh one.
+    /// Local data will repopulate from Supabase on next load.
+    private static func makeContainer() throws -> ModelContainer {
+        let schema = Schema([ClimbSession.self, Achievement.self])
+        let config = ModelConfiguration(schema: schema)
+        do {
+            return try ModelContainer(for: schema, configurations: config)
+        } catch {
+            // Wipe the incompatible store and start fresh
+            let storeURL = config.url
+            try? FileManager.default.removeItem(at: storeURL)
+            try? FileManager.default.removeItem(at: storeURL.appendingPathExtension("shm"))
+            try? FileManager.default.removeItem(at: storeURL.appendingPathExtension("wal"))
+            return try ModelContainer(for: schema, configurations: config)
         }
     }
 
