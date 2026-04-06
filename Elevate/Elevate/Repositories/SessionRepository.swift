@@ -14,6 +14,11 @@ final class SessionRepository {
         try modelContext.save()
     }
 
+    func delete(_ session: ClimbSession) throws {
+        modelContext.delete(session)
+        try modelContext.save()
+    }
+
     func fetchAll() throws -> [ClimbSession] {
         let descriptor = FetchDescriptor<ClimbSession>(
             sortBy: [SortDescriptor(\.startDate, order: .reverse)]

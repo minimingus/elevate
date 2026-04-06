@@ -137,6 +137,27 @@ struct IdleView: View {
             .padding(.horizontal)
             .padding(.top, 16)
 
+            // MARK: Rest day
+            if RestDayStore.canMarkRestDayToday() {
+                Button {
+                    historyVM.markRestDay()
+                } label: {
+                    Label("Mark as Rest Day", systemImage: "moon.fill")
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .padding(.horizontal)
+            } else if RestDayStore.isRestDay(Date()) {
+                Label("Rest Day", systemImage: "moon.fill")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical, 6)
+            }
+
             Spacer()
 
             // MARK: Start button

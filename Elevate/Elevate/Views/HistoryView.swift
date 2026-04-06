@@ -15,7 +15,7 @@ struct HistoryView: View {
                             .foregroundStyle(.secondary)
                             .tracking(1.5)
 
-                        WeeklyChartView(dailySteps: vm.weeklySteps)
+                        WeeklyChartView(dailySteps: vm.weeklySteps, restDayIndices: vm.restDayIndices)
 
                         Divider()
                             .background(Color(.systemGray5))
@@ -62,10 +62,26 @@ struct HistoryView: View {
 
                             VStack(spacing: 1) {
                                 ForEach(vm.sessions, id: \.id) { session in
-                                    HistorySessionRow(
-                                        session: session,
-                                        isBest: session.id == vm.personalBests.bestSessionId
-                                    )
+                                    NavigationLink {
+                                        SessionDetailView(
+                                            session: session,
+                                            personalBests: vm.personalBests,
+                                            onDelete: { vm.delete(session) }
+                                        )
+                                    } label: {
+                                        HistorySessionRow(
+                                            session: session,
+                                            isBest: session.id == vm.personalBests.bestSessionId
+                                        )
+                                    }
+                                    .buttonStyle(.plain)
+                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                        Button(role: .destructive) {
+                                            vm.delete(session)
+                                        } label: {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+                                    }
                                 }
                             }
                             .clipShape(RoundedRectangle(cornerRadius: 16))

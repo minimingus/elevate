@@ -3,6 +3,8 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("dailyStepGoal") private var dailyStepGoal: Int = 400
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = true
+    @AppStorage("notificationsEnabled") private var notificationsEnabled = false
+    @AppStorage("reminderHour") private var reminderHour: Int = 19
     @Environment(\.dismiss) private var dismiss
     let onGoalChanged: () -> Void
 
@@ -49,6 +51,43 @@ struct SettingsView: View {
                     Text("Daily Step Goal")
                 } footer: {
                     Text("Streak and progress are calculated against this goal.")
+                }
+
+                Section {
+                    Toggle("Daily reminder", isOn: $notificationsEnabled)
+                        .onChange(of: notificationsEnabled) { _, enabled in
+                            if enabled {
+                                Task { await NotificationService.shared.requestPermission() }
+                            }
+                            NotificationService.shared.scheduleDaily(
+                                currentStreak: 0, todaySteps: 0,
+                                dailyGoal: dailyStepGoal
+                            )
+                        }
+                    if notificationsEnabled {
+                        HStack {
+                            Text("Remind me at")
+                            Spacer()
+                            Stepper(
+                                "\(reminderHour):00",
+                                value: $reminderHour,
+                                in: 6...22
+                            )
+                            .fixedSize()
+                            .onChange(of: reminderHour) { _, _ in
+                                NotificationService.shared.scheduleDaily(
+                                    currentStreak: 0, todaySteps: 0,
+                                    dailyGoal: dailyStepGoal
+                                )
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Reminders")
+                } footer: {
+                    Text(notificationsEnabled
+                         ? "You'll be reminded at \(reminderHour):00 if you haven't hit your goal."
+                         : "Enable to get a daily nudge when you haven't reached your step goal.")
                 }
 
                 Section {

@@ -17,6 +17,10 @@ func calculateStreak(from sessions: [ClimbSession], goal: Int) -> Int {
             streak += 1
             guard let previous = calendar.date(byAdding: .day, value: -1, to: checkDate) else { break }
             checkDate = previous
+        } else if RestDayStore.isRestDay(checkDate) {
+            // Rest day: preserves streak without adding to it
+            guard let previous = calendar.date(byAdding: .day, value: -1, to: checkDate) else { break }
+            checkDate = previous
         } else {
             break
         }

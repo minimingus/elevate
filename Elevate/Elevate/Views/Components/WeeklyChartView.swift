@@ -3,6 +3,8 @@ import SwiftUI
 struct WeeklyChartView: View {
     /// 7 values, index 0 = today, index 6 = 6 days ago
     let dailySteps: [Int]
+    /// Offsets that are marked as rest days (shown with a moon, grey bar)
+    var restDayIndices: Set<Int> = []
 
     private var maxSteps: Int {
         dailySteps.max().flatMap { $0 > 0 ? $0 : nil } ?? 1
@@ -11,8 +13,13 @@ struct WeeklyChartView: View {
     var body: some View {
         HStack(alignment: .bottom, spacing: 6) {
             ForEach(Array(dailySteps.enumerated().reversed()), id: \.offset) { offset, steps in
+                let isRest = restDayIndices.contains(offset)
                 VStack(spacing: 5) {
-                    if steps > 0 {
+                    if isRest && steps == 0 {
+                        Text("🌙")
+                            .font(.system(size: 9))
+                            .transition(.opacity)
+                    } else if steps > 0 {
                         Text("\(steps)")
                             .font(.system(size: 9, weight: .semibold, design: .rounded))
                             .foregroundStyle(offset == 0 ? .green : .secondary)
@@ -21,7 +28,9 @@ struct WeeklyChartView: View {
                         Spacer().frame(height: 12)
                     }
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(offset == 0 ? Color.green : Color.green.opacity(0.3))
+                        .fill(isRest && steps == 0
+                              ? Color(.systemGray4)
+                              : (offset == 0 ? Color.green : Color.green.opacity(0.3)))
                         .frame(height: barHeight(for: steps))
                         .animation(.easeInOut(duration: 0.5), value: steps)
                     Text(dayLabel(for: offset))

@@ -10,14 +10,19 @@ final class NotificationService {
             .requestAuthorization(options: [.alert, .sound, .badge])
     }
 
-    /// Call after every session or on app launch. Reschedules both notifications.
+    /// Call after every session or on app launch. Reschedules notifications
+    /// based on user preferences (notificationsEnabled, reminderHour).
     func scheduleDaily(currentStreak: Int, todaySteps: Int, dailyGoal: Int) {
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: ["daily_reminder", "streak_protection"])
 
-        let calendar = Calendar.current
+        let enabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
+        guard enabled else { return }
 
-        // Daily reminder at 7pm — only if goal not yet met
+        let savedHour = UserDefaults.standard.integer(forKey: "reminderHour")
+        let reminderHour = savedHour > 0 ? savedHour : 19  // default 7 PM
+
+        // Daily reminder — only if goal not yet met
         if todaySteps < dailyGoal {
             let content = UNMutableNotificationContent()
             content.title = "Time to climb"
@@ -27,13 +32,13 @@ final class NotificationService {
             content.sound = .default
 
             var date = DateComponents()
-            date.hour = 19
+            date.hour = reminderHour
             date.minute = 0
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
             center.add(UNNotificationRequest(identifier: "daily_reminder", content: content, trigger: trigger))
         }
 
-        // Streak protection at 9pm — only if streak > 0 and goal not met
+        // Streak protection 2 hours after reminder — only if streak > 0 and goal not met
         if currentStreak > 0 && todaySteps < dailyGoal {
             let content = UNMutableNotificationContent()
             content.title = "\(currentStreak)-day streak at risk 🔥"
@@ -41,7 +46,7 @@ final class NotificationService {
             content.sound = .default
 
             var date = DateComponents()
-            date.hour = 21
+            date.hour = min(reminderHour + 2, 23)
             date.minute = 0
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
             center.add(UNNotificationRequest(identifier: "streak_protection", content: content, trigger: trigger))

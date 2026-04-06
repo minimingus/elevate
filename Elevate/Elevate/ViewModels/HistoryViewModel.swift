@@ -16,6 +16,7 @@ final class HistoryViewModel: ObservableObject {
     @Published private(set) var personalBests = PersonalBests(maxSteps: 0, maxFloors: 0, maxDuration: 0, bestSessionId: nil)
     @Published private(set) var currentStreak: Int = 0
     @Published private(set) var todaySteps: Int = 0
+    @Published private(set) var restDayIndices: Set<Int> = []
 
     private let sessionRepo: SessionRepository
 
@@ -27,10 +28,27 @@ final class HistoryViewModel: ObservableObject {
         sessions = (try? sessionRepo.fetchAll()) ?? []
         weeklySteps = (try? sessionRepo.weeklySteps()) ?? Array(repeating: 0, count: 7)
         todaySteps = (try? sessionRepo.todaySteps()) ?? 0
+        restDayIndices = RestDayStore.restDayIndices()
         computePersonalBests()
         computeStreak()
         syncToWidget()
         Task { await pullFromSupabase() }
+    }
+
+    func delete(_ session: ClimbSession) {
+        try? sessionRepo.delete(session)
+        Task { try? await SupabaseService.shared.deleteSession(id: session.id) }
+        sessions.removeAll { $0.id == session.id }
+        weeklySteps = (try? sessionRepo.weeklySteps()) ?? Array(repeating: 0, count: 7)
+        todaySteps = (try? sessionRepo.todaySteps()) ?? 0
+        computePersonalBests()
+        computeStreak()
+    }
+
+    func markRestDay() {
+        RestDayStore.markToday()
+        restDayIndices = RestDayStore.restDayIndices()
+        computeStreak()
     }
 
     private func pullFromSupabase() async {

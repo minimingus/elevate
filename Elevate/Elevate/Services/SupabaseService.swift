@@ -113,6 +113,15 @@ actor SupabaseService {
             .value
     }
 
+    func deleteSession(id: UUID) async throws {
+        try await ensureSignedIn()
+        try await client
+            .from("climb_sessions")
+            .delete()
+            .eq("id", value: id)
+            .execute()
+    }
+
     // MARK: - Achievements
 
     func uploadAchievement(id: String, unlockedDate: Date) async throws {
