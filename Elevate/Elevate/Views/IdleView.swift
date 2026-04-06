@@ -158,30 +158,9 @@ struct IdleView: View {
 
             // MARK: Nav row
             HStack(spacing: 12) {
-                Button(action: onHistory) {
-                    Label("History", systemImage: "chart.bar.fill")
-                        .font(.subheadline.bold())
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 13)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
-                }
-                Button(action: onAchievements) {
-                    Label("Badges", systemImage: "trophy.fill")
-                        .font(.subheadline.bold())
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 13)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
-                }
-                Button(action: onLeaderboard) {
-                    Label("Leaderboard", systemImage: "list.number")
-                        .font(.subheadline.bold())
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 13)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
-                }
+                NavButton(icon: "chart.bar.fill", label: "History", action: onHistory)
+                NavButton(icon: "trophy.fill", label: "Badges", action: onAchievements)
+                NavButton(icon: "list.number", label: "Leaderboard", action: onLeaderboard)
             }
             .foregroundStyle(.primary)
             .padding(.horizontal)
@@ -196,6 +175,29 @@ struct IdleView: View {
 }
 
 // MARK: - Subviews
+
+private struct NavButton: View {
+    let icon: String
+    let label: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 5) {
+                Image(systemName: icon)
+                    .font(.system(size: 18, weight: .semibold))
+                Text(label)
+                    .font(.system(size: 10, weight: .semibold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(Color(.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
+    }
+}
 
 private struct StatTile: View {
     let value: String
