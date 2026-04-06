@@ -175,7 +175,7 @@ struct IdleView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 14))
                 }
                 Button(action: onLeaderboard) {
-                    Label("Ranks", systemImage: "list.number")
+                    Label("Leaderboard", systemImage: "list.number")
                         .font(.subheadline.bold())
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 13)
