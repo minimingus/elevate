@@ -82,12 +82,21 @@ final class HistoryViewModel: ObservableObject {
     }
 
     private func syncToWidget() {
-        // App Group sharing requires a paid developer account — guarded for local dev
-        guard let defaults = UserDefaults(suiteName: "group.com.mingus.Elevate") else { return }
-        defaults.set(todaySteps, forKey: "todaySteps")
-        defaults.set(UserDefaults.standard.dailyStepGoal, forKey: "dailyStepGoal")
-        defaults.set(currentStreak, forKey: "currentStreak")
-        WidgetCenter.shared.reloadAllTimelines()
+        let goal = UserDefaults.standard.dailyStepGoal
+        // Widget (App Group)
+        if let defaults = UserDefaults(suiteName: "group.com.mingus.Elevate") {
+            defaults.set(todaySteps, forKey: "todaySteps")
+            defaults.set(goal, forKey: "dailyStepGoal")
+            defaults.set(currentStreak, forKey: "currentStreak")
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+        // Apple Watch idle state
+        PhoneConnectivityService.shared.push(
+            isRunning: false, steps: 0, floors: 0, elapsed: 0,
+            todaySteps: todaySteps,
+            streak: currentStreak,
+            goal: goal
+        )
     }
 
     private func computePersonalBests() {

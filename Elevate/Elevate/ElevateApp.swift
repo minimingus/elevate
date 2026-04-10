@@ -17,17 +17,26 @@ struct ElevateApp: App {
             let pipeline = SensorPipeline()
             let healthKit = HealthKitService()
 
-            _trackingVM = StateObject(wrappedValue: TrackingViewModel(
+            let trackingVM = TrackingViewModel(
                 pipeline: pipeline,
                 sessionRepo: sessionRepo,
                 achievementRepo: achievementRepo,
                 healthKit: healthKit
-            ))
+            )
+            _trackingVM = StateObject(wrappedValue: trackingVM)
             _historyVM = StateObject(wrappedValue: HistoryViewModel(sessionRepo: sessionRepo))
             _achievementVM = StateObject(wrappedValue: AchievementViewModel(
                 achievementRepo: achievementRepo,
                 sessionRepo: sessionRepo
             ))
+
+            // Route Watch start/stop commands to the tracking VM
+            PhoneConnectivityService.shared.onCommand = { command in
+                Task { @MainActor in
+                    if command == "start" { await trackingVM.start() }
+                    else if command == "stop" { await trackingVM.stop() }
+                }
+            }
         } catch {
             fatalError("Failed to create ModelContainer: \(error)")
         }

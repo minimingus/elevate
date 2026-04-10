@@ -35,6 +35,7 @@ final class TrackingViewModel: ObservableObject {
     private var timer: AnyCancellable?
     private var pipelineCancellables = Set<AnyCancellable>()
     private var goalHapticFired = false
+    private var todayStepsBaseline: Int = 0  // steps from prior sessions today (loaded at session start)
 
     init(pipeline: SensorPipeline, sessionRepo: SessionRepository,
          achievementRepo: AchievementRepository, healthKit: HealthKitService) {
@@ -85,18 +86,22 @@ final class TrackingViewModel: ObservableObject {
             .sink { [weak self] _ in
                 guard let self, let start = self.startDate else { return }
                 self.elapsedTime = Date().timeIntervalSince(start)
+                let elapsed = Int(self.elapsedTime)
                 Task {
                     await LiveActivityService.shared.update(
                         steps: self.steps,
                         floors: self.floors,
-                        elapsedSeconds: Int(self.elapsedTime)
+                        elapsedSeconds: elapsed
                     )
                 }
+                self.pushWatchState()
             }
 
+        todayStepsBaseline = (try? sessionRepo.todaySteps()) ?? 0
         pipeline.start()
         HapticService.sessionStart()
         LiveActivityService.shared.start(at: now)
+        pushWatchState()
     }
 
     func stop() async {
@@ -161,6 +166,15 @@ final class TrackingViewModel: ObservableObject {
             elapsedSeconds: Int(end.timeIntervalSince(start))
         )
 
+        // Push idle state to Watch (session ended)
+        let streak = currentStreak(from: (try? sessionRepo.fetchAll()) ?? [])
+        PhoneConnectivityService.shared.push(
+            isRunning: false, steps: 0, floors: 0, elapsed: 0,
+            todaySteps: (try? sessionRepo.todaySteps()) ?? finalSteps,
+            streak: streak,
+            goal: UserDefaults.standard.dailyStepGoal
+        )
+
         NotificationService.shared.scheduleDaily(
             currentStreak: streak,
             todaySteps: todaySteps,
@@ -179,5 +193,17 @@ final class TrackingViewModel: ObservableObject {
 
     private func currentStreak(from sessions: [ClimbSession]) -> Int {
         calculateStreak(from: sessions, goal: UserDefaults.standard.dailyStepGoal)
+    }
+
+    private func pushWatchState() {
+        PhoneConnectivityService.shared.push(
+            isRunning: isRunning,
+            steps: steps,
+            floors: floors,
+            elapsed: Int(elapsedTime),
+            todaySteps: todayStepsBaseline + steps,
+            streak: 0,   // streak not needed during active session
+            goal: UserDefaults.standard.dailyStepGoal
+        )
     }
 }
