@@ -28,10 +28,29 @@ struct IdleView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                if historyVM.currentStreak > 0 {
-                    Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
-                        .font(.title2.bold())
-                        .foregroundStyle(.orange)
+                HStack(spacing: 8) {
+                    if RestDayStore.isRestDay(Date()) {
+                        Label("Rest Day", systemImage: "moon.fill")
+                            .font(.caption.bold())
+                            .foregroundStyle(.indigo)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(Color.indigo.opacity(0.15))
+                            .clipShape(Capsule())
+                    } else if RestDayStore.canMarkRestDayToday() {
+                        Button {
+                            historyVM.markRestDay()
+                        } label: {
+                            Image(systemName: "moon")
+                                .font(.title2)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    if historyVM.currentStreak > 0 {
+                        Label("\(historyVM.currentStreak)", systemImage: "flame.fill")
+                            .font(.title2.bold())
+                            .foregroundStyle(.orange)
+                    }
                 }
             }
             .padding(.horizontal)
@@ -136,27 +155,6 @@ struct IdleView: View {
             }
             .padding(.horizontal)
             .padding(.top, 16)
-
-            // MARK: Rest day
-            if RestDayStore.canMarkRestDayToday() {
-                Button {
-                    historyVM.markRestDay()
-                } label: {
-                    Label("Mark as Rest Day", systemImage: "moon.fill")
-                        .font(.subheadline.bold())
-                        .foregroundStyle(.secondary)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 10)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                }
-                .padding(.horizontal)
-            } else if RestDayStore.isRestDay(Date()) {
-                Label("Rest Day", systemImage: "moon.fill")
-                    .font(.subheadline.bold())
-                    .foregroundStyle(.secondary)
-                    .padding(.vertical, 6)
-            }
 
             Spacer()
 

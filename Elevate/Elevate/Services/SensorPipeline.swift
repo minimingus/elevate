@@ -3,9 +3,9 @@ import Combine
 import Foundation
 import UIKit
 
-/// Counts stair steps using altitude gain from the barometer.
-/// Formula: steps = cumulative altitude gain (m) / riser height (0.175 m)
-/// This is immune to flat walking — only upward altitude change is counted.
+/// Counts stair steps using accelerometer peak detection (50 Hz) gated by barometer climbing state.
+/// The accelerometer gives sub-20 ms step latency; the barometer suppresses flat-walking false positives
+/// and tracks elevation/floors.
 @MainActor
 final class SensorPipeline: ObservableObject {
     @Published private(set) var steps: Int = 0
@@ -13,12 +13,12 @@ final class SensorPipeline: ObservableObject {
     @Published private(set) var elevationMeters: Double = 0
     @Published private(set) var isClimbing: Bool = false
 
-    // Tuning constants — riserHeightMeters is calibrated per user in onboarding
-    private var riserHeightMeters: Double = 0.175
-    private let floorHeightMeters: Double = 3.0     // ~10 ft per floor
+    private let floorHeightMeters: Double = 3.0
 
+    private let motionManager = CMMotionManager()
     private let altimeter = CMAltimeter()
     private let pedometer = CMPedometer()
+    private var stepDetector = StepDetector(threshold: 0.28, debounceInterval: 0.32, windowSize: 5)
     private let operationQueue: OperationQueue = {
         let q = OperationQueue()
         q.maxConcurrentOperationCount = 1
@@ -29,18 +29,22 @@ final class SensorPipeline: ObservableObject {
     private var lastAltitude: Double? = nil
     private var altitudeGainMeters: Double = 0
     private var lastClimbTime: Date = .distantPast
+    // Accelerometer steps accumulated while barometer hasn't yet confirmed climbing.
+    // Released once barometer sees positive altitude delta; discarded after flat timeout.
+    private var pendingSteps: Int = 0
     private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
 
     func start() {
         guard sessionStart == nil else { return }
-        let saved = UserDefaults.standard.double(forKey: "riserHeightMeters")
-        riserHeightMeters = saved > 0.05 ? saved : 0.175
         steps = 0
         floors = 0
         elevationMeters = 0
         isClimbing = false
         lastAltitude = nil
         altitudeGainMeters = 0
+        lastClimbTime = .distantPast
+        pendingSteps = 0
+        stepDetector = StepDetector(threshold: 0.28, debounceInterval: 0.32, windowSize: 5)
         sessionStart = Date()
 
         backgroundTask = UIApplication.shared.beginBackgroundTask(withName: "ElevateClimbing") {
@@ -48,11 +52,13 @@ final class SensorPipeline: ObservableObject {
             self.backgroundTask = .invalid
         }
 
+        startAccelerometer()
         startAltimeter()
         startPedometer()
     }
 
     func stop() -> (steps: Int, floors: Int, elevationMeters: Double) {
+        motionManager.stopAccelerometerUpdates()
         altimeter.stopRelativeAltitudeUpdates()
         pedometer.stopUpdates()
         sessionStart = nil
@@ -64,6 +70,31 @@ final class SensorPipeline: ObservableObject {
     }
 
     // MARK: - Private
+
+    /// Accelerometer at 50 Hz — detects each footfall immediately.
+    private func startAccelerometer() {
+        guard motionManager.isAccelerometerAvailable else { return }
+        motionManager.accelerometerUpdateInterval = 1.0 / 50.0
+        motionManager.startAccelerometerUpdates(to: operationQueue) { [weak self] data, _ in
+            guard let self, let data else { return }
+            // Use vertical (Z) acceleration magnitude for peak detection.
+            let z = abs(data.acceleration.z)
+            let now = Date()
+            Task { @MainActor in
+                self.processAccelSample(z, at: now)
+            }
+        }
+    }
+
+    private func processAccelSample(_ z: Double, at now: Date) {
+        guard stepDetector.processSample(z, at: now) else { return }
+        if isClimbing {
+            steps += 1
+        } else {
+            // Buffer steps — barometer may not have fired yet but user may already be climbing.
+            pendingSteps += 1
+        }
+    }
 
     private func startAltimeter() {
         guard CMAltimeter.isRelativeAltitudeAvailable() else { return }
@@ -79,34 +110,31 @@ final class SensorPipeline: ObservableObject {
     private func processAltitude(_ altitude: Double) {
         defer { lastAltitude = altitude }
         guard let last = lastAltitude else { return }
-
         let delta = altitude - last
 
-        if delta > 0 {
-            // Accumulate every positive delta — barometer noise floor is < 1 cm
-            // so no threshold needed; thresholding causes lost altitude and lag
+        if delta > 0.005 {
             altitudeGainMeters += delta
-            let newSteps = Int(altitudeGainMeters / riserHeightMeters)
-            if newSteps > steps {
-                steps = newSteps
-            }
             floors = Int(altitudeGainMeters / floorHeightMeters)
             elevationMeters = altitudeGainMeters
             isClimbing = true
             lastClimbTime = Date()
-        } else if Date().timeIntervalSince(lastClimbTime) > 2.0 {
+            // Release any accelerometer steps buffered before the barometer fired.
+            if pendingSteps > 0 {
+                steps += pendingSteps
+                pendingSteps = 0
+            }
+        } else if Date().timeIntervalSince(lastClimbTime) > 3.0 {
             isClimbing = false
+            pendingSteps = 0   // discard — user was on flat ground
         }
     }
 
-    /// CMPedometer provides floor count as a cross-check / fallback.
     private func startPedometer() {
         guard CMPedometer.isFloorCountingAvailable(), let start = sessionStart else { return }
         pedometer.startUpdates(from: start) { [weak self] data, _ in
             guard let self, let data else { return }
             let pedometerFloors = data.floorsAscended?.intValue ?? 0
             Task { @MainActor in
-                // Use pedometer floors only if barometer hasn't counted more
                 if pedometerFloors > self.floors {
                     self.floors = pedometerFloors
                 }
