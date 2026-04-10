@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199DCF93A15F9A5E616B0219 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644D1D2C8981D467DB8A428B /* WatchConnectivity.framework */; };
+		21A1C8447FB0D69040E8D9DC /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644D1D2C8981D467DB8A428B /* WatchConnectivity.framework */; };
 		B161A30C2F8111260033FCF7 /* ElevateWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B161A3002F8111240033FCF7 /* ElevateWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B161AA172F84088A0033FCF7 /* ElevateShared in Frameworks */ = {isa = PBXBuildFile; productRef = B161A30E2F8111260033FCF7 /* ElevateShared */; };
 		B161AA182F84088A0033FCF7 /* ElevateShared in Frameworks */ = {isa = PBXBuildFile; productRef = B161A30F2F8111260033FCF7 /* ElevateShared */; };
@@ -16,9 +18,17 @@
 		B1C85DC12F84127300F26C4E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC02F84127300F26C4E /* Realtime */; };
 		B1C85DC32F84127300F26C4E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC22F84127300F26C4E /* Storage */; };
 		B1C85DC42F84127300F26C4E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B1C85DC52F84127300F26C4E /* Supabase */; };
+		FE55AC991B2FABBD92C6FF71 /* ElevateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1D8232FE179136E4C448B057 /* ElevateWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		701784689BC67344AD77215B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B161A1882F8111240033FCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 291AB3A58FC1697DB1616225;
+			remoteInfo = ElevateWatch;
+		};
 		B161A1A02F8111260033FCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B161A1882F8111240033FCF7 /* Project object */;
@@ -54,9 +64,22 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6007506CB4B6A2F187FD2F9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FE55AC991B2FABBD92C6FF71 /* ElevateWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D8232FE179136E4C448B057 /* ElevateWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevateWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		644D1D2C8981D467DB8A428B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		B161A1902F8111240033FCF7 /* Elevate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B161A19F2F8111260033FCF7 /* ElevateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,9 +107,22 @@
 			path = ElevateWidget;
 			sourceTree = "<group>";
 		};
+		EE498439524BAB7DD106645A /* ElevateWatch */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElevateWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A7AE553FF2F4B01231D98D7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199DCF93A15F9A5E616B0219 /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B161A18D2F8111240033FCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +134,7 @@
 				B1C85DBB2F84127300F26C4E /* Auth in Frameworks */,
 				B1C85DC12F84127300F26C4E /* Realtime in Frameworks */,
 				B161AA172F84088A0033FCF7 /* ElevateShared in Frameworks */,
+				21A1C8447FB0D69040E8D9DC /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +163,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244382FB28FA9AA9F0176A63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				644D1D2C8981D467DB8A428B /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B161A1872F8111240033FCF7 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +179,8 @@
 				B161A1AC2F8111260033FCF7 /* ElevateUITests */,
 				B161A3012F8111240033FCF7 /* ElevateWidget */,
 				B161A1912F8111240033FCF7 /* Products */,
+				EE498439524BAB7DD106645A /* ElevateWatch */,
+				244382FB28FA9AA9F0176A63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +191,7 @@
 				B161A19F2F8111260033FCF7 /* ElevateTests.xctest */,
 				B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */,
 				B161A3002F8111240033FCF7 /* ElevateWidget.appex */,
+				1D8232FE179136E4C448B057 /* ElevateWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +199,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		291AB3A58FC1697DB1616225 /* ElevateWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4EF9F5449BCD5DD709A0F1E /* Build configuration list for PBXNativeTarget "ElevateWatch" */;
+			buildPhases = (
+				3ADDAAC53CAF34D416E789E0 /* Sources */,
+				A7AE553FF2F4B01231D98D7B /* Frameworks */,
+				0F65BE4C4697CB5EF1B71D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EE498439524BAB7DD106645A /* ElevateWatch */,
+			);
+			name = ElevateWatch;
+			productName = ElevateWatch;
+			productReference = 1D8232FE179136E4C448B057 /* ElevateWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B161A18F2F8111240033FCF7 /* Elevate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B161A1B32F8111260033FCF7 /* Build configuration list for PBXNativeTarget "Elevate" */;
@@ -159,11 +227,13 @@
 				B161A18D2F8111240033FCF7 /* Frameworks */,
 				B161A18E2F8111240033FCF7 /* Resources */,
 				B161A30B2F8111240033FCF7 /* Embed Foundation Extensions */,
+				E6007506CB4B6A2F187FD2F9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B161A3102F8111260033FCF7 /* PBXTargetDependency */,
+				0781689E211BB574D35707C7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B161A1922F8111240033FCF7 /* Elevate */,
@@ -199,8 +269,6 @@
 				B161A1A22F8111260033FCF7 /* ElevateTests */,
 			);
 			name = ElevateTests;
-			packageProductDependencies = (
-			);
 			productName = ElevateTests;
 			productReference = B161A19F2F8111260033FCF7 /* ElevateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -222,8 +290,6 @@
 				B161A1AC2F8111260033FCF7 /* ElevateUITests */,
 			);
 			name = ElevateUITests;
-			packageProductDependencies = (
-			);
 			productName = ElevateUITests;
 			productReference = B161A1A92F8111260033FCF7 /* ElevateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -261,6 +327,9 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					291AB3A58FC1697DB1616225 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					B161A18F2F8111240033FCF7 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -299,11 +368,19 @@
 				B161A19E2F8111260033FCF7 /* ElevateTests */,
 				B161A1A82F8111260033FCF7 /* ElevateUITests */,
 				B161A3052F8111240033FCF7 /* ElevateWidget */,
+				291AB3A58FC1697DB1616225 /* ElevateWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F65BE4C4697CB5EF1B71D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B161A18E2F8111240033FCF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +412,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3ADDAAC53CAF34D416E789E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B161A18C2F8111240033FCF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +450,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0781689E211BB574D35707C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 291AB3A58FC1697DB1616225 /* ElevateWatch */;
+			targetProxy = 701784689BC67344AD77215B /* PBXContainerItemProxy */;
+		};
 		B161A1A12F8111260033FCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B161A18F2F8111240033FCF7 /* Elevate */;
@@ -384,6 +473,41 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		58EA2D877760BC928774DA7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ElevateWatch/ElevateWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
 		B161A1B12F8111260033FCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -719,6 +843,40 @@
 			};
 			name = Release;
 		};
+		E5CAF6DCA51712B1724F9743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ElevateWatch/ElevateWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FDLSN3ZJFV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingus.Elevate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,6 +921,15 @@
 			buildConfigurations = (
 				B161A3062F8111260033FCF7 /* Debug */,
 				B161A3072F8111260033FCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4EF9F5449BCD5DD709A0F1E /* Build configuration list for PBXNativeTarget "ElevateWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58EA2D877760BC928774DA7E /* Debug */,
+				E5CAF6DCA51712B1724F9743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
