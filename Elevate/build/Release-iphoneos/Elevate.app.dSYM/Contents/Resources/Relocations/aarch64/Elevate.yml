@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/tomerab/dev/elevate/Elevate/build/Release-iphoneos/Elevate.app/Elevate'
-relocations:     []
-...

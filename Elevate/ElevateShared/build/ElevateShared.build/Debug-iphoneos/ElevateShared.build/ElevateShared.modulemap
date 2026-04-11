@@ -1,4 +1,0 @@
-module ElevateShared {
-header "ElevateShared-Swift.h"
-export *
-}

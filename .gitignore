@@ -2,6 +2,8 @@
 *.xcuserdata/
 *.xcworkspace/xcuserdata/
 DerivedData/
+Elevate/build/
+Elevate/ElevateShared/build/
 *.pbxuser
 *.mode1v3
 *.mode2v3
