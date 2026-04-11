@@ -1,0 +1,59 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatch-primary.dia",
+    "emit-module-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatch-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatch-primary-emit-module.dia",
+    "pch" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatch-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatch-primary.swiftdeps"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWatch/ElevateWatchApp.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/ElevateWatchApp~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWatch/Services/WatchSessionService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchSessionService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWatch/Views/WatchActiveView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchActiveView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWatch/Views/WatchIdleView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchIdleView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWatch/WatchContentView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-watchos/ElevateWatch.build/Objects-normal/arm64/WatchContentView~partial.swiftmodule"
+  }
+}

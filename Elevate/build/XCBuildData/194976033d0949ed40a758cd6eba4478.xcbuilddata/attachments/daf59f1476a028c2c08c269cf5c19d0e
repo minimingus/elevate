@@ -1,0 +1,379 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Elevate-primary.dia",
+    "emit-module-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Elevate-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Elevate-primary-emit-module.dia",
+    "pch" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Elevate-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Elevate-primary.swiftdeps"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/ContentView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/ElevateApp.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ElevateApp~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Item.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Item~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Models/Achievement.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/Achievement~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Models/ClimbSession.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbSession~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Models/ClimbType.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ClimbType~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Models/UserDefaults+Goal.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/UserDefaults+Goal~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Repositories/AchievementRepository.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementRepository~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Repositories/SessionRepository.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionRepository~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/AchievementEngine.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementEngine~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/CalorieEstimator.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/CalorieEstimator~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/HapticService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HapticService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/HealthKitService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HealthKitService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/LiveActivityService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LiveActivityService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/NotificationService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/NotificationService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/PhoneConnectivityService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/PhoneConnectivityService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/RestDayStore.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RestDayStore~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/SensorPipeline.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SensorPipeline~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/StairLandmarks.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StairLandmarks~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/StepDetector.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StepDetector~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/StreakCalculator.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/StreakCalculator~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Services/SupabaseService.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SupabaseService~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/ViewModels/AchievementViewModel.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementViewModel~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/ViewModels/HistoryViewModel.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryViewModel~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/ViewModels/TrackingViewModel.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/TrackingViewModel~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/AchievementsView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/AchievementsView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/ActiveSessionView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/ActiveSessionView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/Components/RingProgressView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/RingProgressView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/Components/WeeklyChartView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/WeeklyChartView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/HistoryView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/HistoryView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/IdleView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/IdleView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/LeaderboardView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/LeaderboardView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/OnboardingView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/SessionDetailView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionDetailView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/SessionSummaryView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SessionSummaryView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/Elevate/Views/SettingsView.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/Elevate.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

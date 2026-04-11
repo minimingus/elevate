@@ -167,7 +167,6 @@ final class TrackingViewModel: ObservableObject {
         )
 
         // Push idle state to Watch (session ended)
-        let streak = currentStreak(from: (try? sessionRepo.fetchAll()) ?? [])
         PhoneConnectivityService.shared.push(
             isRunning: false, steps: 0, floors: 0, elapsed: 0,
             todaySteps: (try? sessionRepo.todaySteps()) ?? finalSteps,

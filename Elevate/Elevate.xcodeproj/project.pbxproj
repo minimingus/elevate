@@ -89,26 +89,36 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B161A1922F8111240033FCF7 /* Elevate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = Elevate;
 			sourceTree = "<group>";
 		};
 		B161A1A22F8111260033FCF7 /* ElevateTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ElevateTests;
 			sourceTree = "<group>";
 		};
 		B161A1AC2F8111260033FCF7 /* ElevateUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ElevateUITests;
 			sourceTree = "<group>";
 		};
 		B161A3012F8111240033FCF7 /* ElevateWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ElevateWidget;
 			sourceTree = "<group>";
 		};
 		EE498439524BAB7DD106645A /* ElevateWatch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ElevateWatch;
 			sourceTree = "<group>";
 		};
@@ -227,13 +237,11 @@
 				B161A18D2F8111240033FCF7 /* Frameworks */,
 				B161A18E2F8111240033FCF7 /* Resources */,
 				B161A30B2F8111240033FCF7 /* Embed Foundation Extensions */,
-				E6007506CB4B6A2F187FD2F9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B161A3102F8111260033FCF7 /* PBXTargetDependency */,
-				0781689E211BB574D35707C7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B161A1922F8111240033FCF7 /* Elevate */,

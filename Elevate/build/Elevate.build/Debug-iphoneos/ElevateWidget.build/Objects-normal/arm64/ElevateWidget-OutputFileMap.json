@@ -1,0 +1,49 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget-primary.dia",
+    "emit-module-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget-primary-emit-module.dia",
+    "pch" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget-primary.swiftdeps"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWidget/ElevateWidget.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidget~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWidget/ElevateWidgetBundle.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetBundle~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/ElevateWidget/ElevateWidgetLiveActivity.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/ElevateWidgetLiveActivity~partial.swiftmodule"
+  },
+  "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/tomerab/dev/elevate/Elevate/build/Elevate.build/Debug-iphoneos/ElevateWidget.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
